@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 style="text-align:center;">Admin Panel</h2>
+
+<div style="text-align:center;">
+    <input type="text" id="itemName" placeholder="Item Name">
+    <input type="number" id="itemPrice" placeholder="Price">
+    <button onclick="addItem()">Add Item</button>
+</div>
+
+<script>
+function addItem() {
+    const name = document.getElementById("itemName").value;
+    const price = document.getElementById("itemPrice").value;
+
+    if(name && price) {
+        let menu = JSON.parse(localStorage.getItem("menu")) || [];
+        menu.push({ name, price: Number(price) });
+        localStorage.setItem("menu", JSON.stringify(menu));
+        alert("Item Added!");
+    }
+}
+</script>
+
+</body>
+</html>
