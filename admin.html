@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
+<meta charset="UTF-8">
+<title>Admin Panel - SJCET Canteen</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 style="text-align:center;">Admin Panel</h2>
+<h1>🔐 Admin Panel</h1>
 
-<div style="text-align:center;">
-    <input type="text" id="itemName" placeholder="Item Name">
-    <input type="number" id="itemPrice" placeholder="Price">
-    <button onclick="addItem()">Add Item</button>
+<div id="loginSection">
+  <input type="email" id="adminEmail" placeholder="Admin Email">
+  <input type="password" id="adminPassword" placeholder="Password">
+  <button onclick="adminLogin()">Login</button>
 </div>
 
-<script>
-function addItem() {
-    const name = document.getElementById("itemName").value;
-    const price = document.getElementById("itemPrice").value;
+<div id="adminDashboard" style="display:none;">
 
-    if(name && price) {
-        let menu = JSON.parse(localStorage.getItem("menu")) || [];
-        menu.push({ name, price: Number(price) });
-        localStorage.setItem("menu", JSON.stringify(menu));
-        alert("Item Added!");
-    }
-}
-</script>
+  <h2>Add Menu Item</h2>
+  <input type="text" id="itemName" placeholder="Item Name">
+  <input type="number" id="itemPrice" placeholder="Price">
+  <button onclick="addMenuItem()">Add Item</button>
 
+  <h2>Menu List</h2>
+  <div id="menuList"></div>
+
+  <h2>Orders</h2>
+  <div id="orderList"></div>
+
+  <h2>Revenue</h2>
+  <h3 id="revenueDisplay">₹0</h3>
+
+</div>
+
+<script type="module" src="app.js"></script>
 </body>
 </html>
