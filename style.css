@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.menu-item {
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background: white;
+    color: #ee0979;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
