@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJCET Palai Canteen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍽 SJCET Palai Canteen</h1>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#cart">Cart</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Fresh • Hygienic • Affordable</h2>
+    <p>Order your favorite food instantly!</p>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <div id="menuContainer" class="menu-grid"></div>
+</section>
+
+<section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <h3 id="totalAmount">Total: ₹0</h3>
+
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="department" placeholder="Department" required>
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 SJCET Palai Canteen
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
